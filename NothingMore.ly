@@ -32,7 +32,7 @@ the_chords = \chords {
    %25
    f2 g2 | c1 | a2.:m g4 | c1 |
    %29
-   f1 | f2 g2 | a2:m | g2:/b | 
+   f1 | f2 g2 | a2.:m  g4:/b | 
    %32
    c1 | f1 | g1 | c2 g2 |
    %36
@@ -55,8 +55,9 @@ the_chords = \chords {
 
 the_melody = \relative c' {
   \key c \major
+  %\clef "G_8"
   %1
-  \compressFullBarRests R1*8
+  R1*8
 
   %9
   r1 | r1  \bar "||"
@@ -71,33 +72,40 @@ the_melody = \relative c' {
   r4 e16 e8 g16~ g8 c, f16 f8 e16~ | e2 r2 |
 
   %17
-  r8 f16 f~ f8 f f16 e e8~ e d8 | c8 d d4 r8  a c e~ 
+  r8 <f a>16 <f a>~ <f a>8 <f a> <f a>16 <e g> <e g>8~ <e g> <d f>8 | 
+  <c e>8 <d g> <d g>4 r8  <a c>  <c e> <e g>~ 
   \bar "||"
-  e2   r8 g8 g e~ | e2    r4  e16 e8. |
+  <e g>2   r8 <g b>8 <g b> <e a>~ | <e a>2    r4  <e g>16 <e g>8. |
 
   %21
-  c8 c e e   c c c c | d16 e8 e16~ e4   r8 a, c e~ | 
-  e2   r8 g g e~ | e2   r4 e16 e8. |
+  <c e>8 <c e> <e g> <e g>  <c f> <c e> <c e> <c e> | 
+  <d f>16 <e g>8 <e g>16~ <e g>4   r8 <a, c> <c e> <e g>~ | 
+  <e g>2   r8 <g b> <g b> <e a>~ | <e a>2   r4 <e g>16 <e g>8. |
 
   %25
-  c8 c e e  d c g e' | d c~ c4  r2 
+  <c f>8 <c e> <e g> <e g>  <d f> <c e> <g c> <e' g> | <d f> <c e>~ <c e>4  r2 
   \bar "||"  r8 c8   e16 e8 g16~ g4  f16 f8 e16~ |
   e2  r2
 
   %29
   r8 f16 f16~ f8 e   f16 e8 d16~ d8 c | 
-  g16 g8 e'16~ e8 e d4 r4 | r4 e16 e8 g16~   g8 c, f16 f8 e16~ |
+  g16 g8 e'16~ e8 e d4 r4 | r4 e16 e8 g16~   g8 c, f16 f8 e16~ 
 
   %32
-  e2   r4 r8 e8  | f8 f16 f~ f8 f  f e c16 c g8 | 
-  d'16 e e8~ e c16 d   r8 f f e~ | e2  r8 g g e~
+  | e2   r4 r8 <e g>8  
+  | <f a>8 <f a>16 <f a>~ <f a>8 <f a>  <f a> <e g> <c e>16 <c e> <g e'>8 
+  | <d' f>16  <e g>  <e g>8~ <e g> <c f>16 <d f>  r8 <f a> <f a> <e g>~ 
+  | <e g>2  r8 <g b> <g b> <e a>~
 
   %36
-  e2   r4 e16 e8. | c8 c e e   c c c c | d16 e8 e16~ e4    r8 a, c e~ |
-  e2   r8 g g e~ |
-
+  <e a>2   r4  <e g>16   <e g>8. 
+  | <c f>8 <c e> <e g> <e g>   <c f> <c e> <c e> <c e> 
+  | <d f>16 <e g>8 <e g>16~ <e g>4    r8 <a, c> <c e> <e g>~ 
+  | <e g>2   r8 <g b> <g c> <e a>~ 
   %40
-  e2   r4 e16 e8. | c8 c e e   d c g e' | d c~ c4  r2 
+  | <e a>2   r4 <e g>16 <e g>8. 
+  | <c f>8  <c e>  <e g> <e g>  <d f> <c e> <g c> <e' g> 
+  | <d f> <c e>~ <c e>4  r2 
 
   \bar "||"  
   r8 c e16 e e e  g8 g a e~ | 
@@ -107,25 +115,41 @@ the_melody = \relative c' {
   g'8 g g4   g8 e g a~ | 
  
   %48
-  a8 e~ e4   r8 e16 c~ c c8 d16~ | d8 b~ b4   r2 | r1 
+  a8 e~ e4   r8 e16 c~ c c8 d16~ 
+  | d8 b~ b4   r2 
+  | r1 
 
-  \bar "||" r1 | r1 | r1 | r1
+  %51
+  \bar "||" 
+    <e g>2 <d g>2
+  | <c g'>1
+  | <c g'>1
+  | <c g'>1
 
   %55
-  r1 | r1 | r1 | r2   r8 g c e~ 
+  | <e g>2 f2
+  | <e g>1
+  | <c g'>2  <d a'>2
+  | <c g'>2   r8 g c e~ 
 
-   \bar "||" e2  r8 g g e~ | e2   r4 e16 e8.|
+   \bar "||" e2  r8 g g e~ 
+
+  | e2   r4  <e g>16 <e g>8.
 
   %61
-  c8 c e e  c c c c | d16 e8 e16~ e4   r8 a, c e~ || e2  r8 g a e~ | 
-  e2  r4 e16 e8. |
+  | <c f>8 <c e> <e g> <e g>  <c f> <c e> <c e> <c e> 
+  | <d f>16 <e g>8 <e g>16~ <e g>4   r8 <a, c> <c e> <e g>~ 
+  \bar "||" <e g>2  r8 <g b> <a c> <e a>~ 
+  | <e a>2  r4 <e g>16 <e g>8.
 
   %65
-  c8 c e e  d c g e' | d c~ c4 r4 e16 e8. | c8 c e e  d c g e' | 
-  d c~ c4   r4 e16 e8. |
+  | <c f>8 <c e> <e g> <e g>  <d f> <c e> <g c> <e' g> 
+  | <d f> <c e>~ <c e>4 r4 <e g>16 <e g>8. 
+  | <c f>8 <c e> <e g> <e g>  <d f> <c e> <g c> <e' g> 
+  | <d f> <c e>~ <c e>4   r4 <e g>16 <e g>8. 
 
   %69
-  c8 c e e  d c r4   | r1 | r1 
+  | <c f>8 <c e> <e c'> <e c'>   <d a'> <c g'> r4   | r1 | r1 
 
   \bar "|."
 }
@@ -166,9 +190,16 @@ the_lyrics = \lyricmode {
   And | he -- roes don't look like they used  |
   %48
   to they look like you | do
-  | | | |    | | | |
+  |
+  | Love Love 
+  | Love 
+  | Love
+  | Love
+  | Love Love 
+  | Love
+  | Love Love 
   %55
-  We are love | We are one | We are 
+  | Love We are love | We are one | We are 
   %61
   how we treat each oth -- er when the | day is done.
   We are peace  | We are war We are  |
@@ -189,6 +220,9 @@ the_lyrics = \lyricmode {
 
   \transpose c e \the_chords
   \transpose c e \the_melody
+
+  %\the_chords
+  %\the_melody
   \addlyrics \the_lyrics
 
 >>
